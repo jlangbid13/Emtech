@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Familjen Grotesk',
     fontSize: 10,
     fontWeight: '500',
-    lineHeight: 'normal',
+   
   },
 });
