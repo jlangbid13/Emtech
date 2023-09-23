@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function Input() {
+
+  
   return (
     <View style={styles.inputGroup}>
       {/* Email Input */}
@@ -32,13 +34,15 @@ export default function Input() {
 const styles = StyleSheet.create({
   inputGroup: {
     paddingTop: 10,
+
   },
   container: {
     alignItems: 'center',
     marginBottom: 10,
+
   },
   label: {
-    color: 'rgba(42, 45, 52, 0.50)',
+    color: 'black',
     fontSize: 11,
     fontFamily: 'Familjen Grotesk',
     fontWeight: '500',
@@ -49,7 +53,7 @@ const styles = StyleSheet.create({
     height: 35,
     borderRadius: 6,
     borderWidth: 1,
-    borderColor: 'rgba(90, 83, 74, 0.75)',
+    borderColor: 'black',
     paddingLeft: 10,
   },
   passwordInput: {
@@ -57,7 +61,7 @@ const styles = StyleSheet.create({
     height: 35,
     borderRadius: 6,
     borderWidth: 1,
-    borderColor: 'rgba(90, 83, 74, 0.75)',
+    borderColor: 'black',
     paddingLeft: 10,
   },
 

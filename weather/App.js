@@ -12,13 +12,15 @@ export default function App() {
           source={require('./assets/WeatherEats.png')}
           style={styles.logoImage}
         />
+        <View style={{ marginBottom: 20 }} />
         <Text style={styles.subtext}>
           Log In
         </Text>
       </View>
       <Input />
-      <SignUp />
       <Account />
+      <SignUp />
+      
     </View>
   );
 }
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
   logoImage: {
     width: 368,
     height: 225,
-    borderRadius: 24,
+
   },
   subtext: {
     color: '#000',

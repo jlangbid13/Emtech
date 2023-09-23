@@ -16,18 +16,11 @@ const styles = StyleSheet.create({
   account: {
     flexDirection: 'row',
     alignItems: 'center',
-    fontSize: 18,
-    marginLeft: 200,
+    fontSize: 20,
+    marginLeft: 230,
     marginRight: 10,
-    marginBottom: 300,
-    marginTop: 40,
-  },
-  newUserText: {
-    color: 'rgba(42, 45, 52, 0.50)',
-    fontFamily: 'Familjen Grotesk',
-    fontSize: 10,
-    fontWeight: '500',
-    lineHeight: 'normal',
+    marginBottom: 10,
+    marginTop: 3,
   },
 
   createAccountText: {
