@@ -1,59 +1,40 @@
-import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
 
-export default function SignUp({navigation}) {
-
+export default function SignUp({ navigation }) {
   return (
-    
     <View style={styles.signupGroup}>
-    <TouchableOpacity style={styles.container}  onPress={() => navigation.navigate('frontpg')} >
-      <Text style={styles.signUp}>Log in</Text>
-    </TouchableOpacity>
+      <Button
+        title="Log in"
+        onPress={() => navigation.navigate('Register')}
+        color="#151A7B"
+        style={styles.button}
+      />
 
-    <View style={{ marginBottom: 10 }} />
+      <View style={{ marginBottom: 10 }} />
 
-
-    <TouchableOpacity style={styles.containers} onPress={() => Linking.openURL('URL_HERE')}>
-      <Text style={styles.signUp}>Sign Up</Text>
-    </TouchableOpacity>
+      <Button
+        title="Sign Up"
+        onPress={() => navigation.navigate('Register')}
+        color="#0077B6"
+        style={styles.button}
+      />
     </View>
-    
-
-    
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-  signupGroup:{ // Add spacing between input and Sign Up
-    alignItems: "center",
+  signupGroup: {
+    alignItems: 'center',
     marginTop: 20,
-
   },
-  container: {
-    width: 312,
-    height: 35,
+  button: {
+    paddingLeft: 40,
     borderRadius: 10,
-    backgroundColor: '#151A7B',
-    alignItems: "center",
-    justifyContent: "center",   
-  },
-  containers: {
-    width: 312,
-    height: 40,
-    borderRadius: 10,
-    backgroundColor: '#0077B6',
-    alignItems: "center",
-    justifyContent: "center",
-
   },
   signUp: {
     fontSize: 10,
-
-
     fontWeight: '500',
     color: '#EEE7DA',
-  }
-})
-
-
-
+  },
+});
