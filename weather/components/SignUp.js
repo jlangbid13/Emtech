@@ -8,7 +8,7 @@ export default function SignUp() {
       <Text style={styles.signUp}>Log in</Text>
     </TouchableOpacity>
 
-    <View style={{ marginBottom: 20 }} />
+    <View style={{ marginBottom: 10 }} />
 
 
     <TouchableOpacity style={styles.containers}>
@@ -43,8 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#0077B6',
     alignItems: "center",
     justifyContent: "center",
-
-
 
   },
   signUp: {
