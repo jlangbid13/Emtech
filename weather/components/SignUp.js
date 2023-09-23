@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
 
-export default function SignUp() {
+export default function SignUp({navigation}) {
 
   return (
     
     <View style={styles.signupGroup}>
-    <TouchableOpacity style={styles.container} onPress={() => Linking.openURL('URL_HERE')}>
+    <TouchableOpacity style={styles.container}  onPress={() => navigation.navigate('frontpg')} >
       <Text style={styles.signUp}>Log in</Text>
     </TouchableOpacity>
 
@@ -17,7 +17,6 @@ export default function SignUp() {
       <Text style={styles.signUp}>Sign Up</Text>
     </TouchableOpacity>
     </View>
-    
     
 
     
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
   },
   container: {
     width: 312,
-    height: 25,
+    height: 35,
     borderRadius: 10,
     backgroundColor: '#151A7B',
     alignItems: "center",
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
   },
   containers: {
     width: 312,
-    height: 25,
+    height: 40,
     borderRadius: 10,
     backgroundColor: '#0077B6',
     alignItems: "center",
@@ -50,8 +49,11 @@ const styles = StyleSheet.create({
   signUp: {
     fontSize: 10,
 
-    fontFamily: 'Familjen Grotesk',
+
     fontWeight: '500',
     color: '#EEE7DA',
   }
 })
+
+
+

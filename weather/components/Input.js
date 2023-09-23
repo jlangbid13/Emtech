@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   label: {
     color: 'black',
     fontSize: 11,
-    fontFamily: 'Familjen Grotesk',
+
     fontWeight: '500',
     marginBottom: 5, // Adjust this value to control the spacing between the label and input
   },

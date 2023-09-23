@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
 
   createAccountText: {
     color: '#4A4238',
-    fontFamily: 'Familjen Grotesk',
     fontSize: 10,
     fontWeight: '500',
    

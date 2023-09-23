@@ -1,52 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import Input from './components/Input';
-import SignUp from "./components/SignUp";
-import Account from './components/forgotpass';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import frontpg from './components/frontpg';
+const Stack = createStackNavigator();
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.innerContainer}>
-        <Image
-          source={require('./assets/WeatherEats.png')}
-          style={styles.logoImage}
-        />
-        <View style={{ marginBottom: 20 }} />
-        <Text style={styles.subtext}>
-          Log In
-        </Text>
-      </View>
-      <Input />
-      <Account />
-      <SignUp />
-      
-    </View>
+    <NavigationContainer >
+      <Stack.Navigator screenOptions = {{ headerShown: false }}>
+        <Stack.Screen name="Login" component={frontpg} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
+
+
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    backgroundColor: '#E3F0F6',
-    alignItems: 'center',
-    justifyContent: 'flex-start', 
-  },
-  innerContainer: {
-    alignItems: 'center',
-    backgroundColor: '#E3F0F6',
-    marginBottom: 20,
-    marginTop: 100, 
-  },
-  logoImage: {
-    width: 368,
-    height: 225,
-
-  },
-  subtext: {
-    color: '#000',
-    fontSize: 18,
-    fontFamily: 'Georama',
-    fontWeight: '400',
-  },
-});
