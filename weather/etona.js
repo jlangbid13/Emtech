@@ -25,13 +25,13 @@ export default function Register({ navigation }) {
           placeholder="Email"
         />
         <Button
-          title="Log In" color="#0077B6"
+          title="Signup" color="#0077B6"
           onPress={() => navigation.navigate('Logins')}
         />
       </View>
       
         <TouchableOpacity>
-        <Text style={styles.backToLogin} >
+        <Text style={styles.backToLogin} onPress={() => navigation.navigate('Logins')} >
         
         Back to Login
         </Text>

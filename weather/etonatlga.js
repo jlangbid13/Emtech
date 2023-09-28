@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Button, Linking } from 'react-native';
 
 export default function Logins({ navigation }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Handle login logic here
+    // After handling the login logic, reset the input fields
+    setEmail('');
+    setPassword('');
+    navigation.navigate('Home');
+  };
+
+  const handleSignUp = () => {
+    // Handle sign-up logic here
+    // After handling the sign-up logic, reset the input fields
+    setEmail('');
+    setPassword('');
+    navigation.navigate('Register');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
@@ -17,17 +36,21 @@ export default function Logins({ navigation }) {
       <View style={styles.inputGroup}>
         {/* Email Input */}
         <View style={styles.inputContainer}>
-          <Text style={styles.label}>Email Address</Text>
+          <Text style={styles.label} >Email Address</Text>
           <TextInput
-            style={styles.emailInput}
+            style={styles.emailInput} placeholder="Email"
+            value={email}
+            onChangeText={(text) => setEmail(text)}
           />
         </View>
         {/* Password Input */}
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Password</Text>
           <TextInput
-            style={styles.passwordInput}
+            style={styles.passwordInput} placeholder="Password"
             secureTextEntry
+            value={password}
+            onChangeText={(text) => setPassword(text)}
           />
         </View>
       </View>
@@ -40,7 +63,7 @@ export default function Logins({ navigation }) {
         <View style={styles.button}>
           <Button
             title="Log in"
-            onPress={() => navigation.navigate('Register')}
+            onPress={handleLogin}
             color="#151A7B"
           />
         </View>
@@ -48,12 +71,11 @@ export default function Logins({ navigation }) {
         <View style={styles.button}>
           <Button
             title="Sign Up"
-            onPress={() => navigation.navigate('Register')}
+            onPress={handleSignUp}
             color="#0077B6"
           />
         </View>
       </View>
-      
     </View>
   );
 }
